@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+/* MIXIN
+-------------------------------------------------- */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after { clear: both; }
+  & { *zoom: 1; }
+}
+
+@mixin cover {
+  width:100%;
+  height:100%;
+}
+@mixin player {
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+  -ms-filter: alpha(opacity=$opacity);
+}
+
+@mixin sec1 {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+@mixin secM5 {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+@mixin del1 {
+  -webkit-animation-delay:1s;
+  -moz-animation-delay:1s;
+  animation-delay:1s;
+}
+@mixin del2 {
+  -webkit-animation-delay:2s;
+  -moz-animation-delay:2s;
+  animation-delay:2s;
+}
+@mixin del3 {
+  -webkit-animation-delay:3s;
+  -moz-animation-delay:3s;
+  animation-delay:3s;
+}
+
+/*
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+     -moz-transition-delay: $transition-delay;
+       -o-transition-delay: $transition-delay;
+          transition-delay: $transition-delay;
+}
+*/
